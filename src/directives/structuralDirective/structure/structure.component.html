@@ -1,0 +1,120 @@
+<p>structure works!</p>
+<p style="display: block;">Book Name is displayed in block</p>
+<p style="display: none;">Book Name: Sadguru</p>
+
+*************** ngIf *****************
+
+<p *ngIf="true">Visible</p>
+<p *ngIf="false">Not Visible</p> 
+
+<div *ngIf="book">Book Variable exist</div>
+
+<div *ngIf="books">Books Present</div>
+
+<div *ngIf="book1">Book1 present</div>
+
+
+<p *ngIf="book2; else noBooksAvailable">Book2 present</p>
+
+<ng-template #noBooksAvailable>
+    Books are not present 
+</ng-template>
+<br>
+
+<div *ngIf="10%3==0; else divisibleByThree">
+    Divisible By Three
+</div>
+
+<ng-template #divisibleByThree>
+    Not Divisible By Three
+</ng-template>
+
+<br>
+*********************************************************
+<br>
+<div *ngIf="10%2==0; then evenNumber; else oddNumber">
+    Ten is divisible by 2
+</div>
+
+<ng-template #evenNumber>
+    Ten is divisible by Two.So it is even Number
+</ng-template>
+
+<ng-template #oddNumber>
+    Ten is not divisible by Two.So it is odd Number
+</ng-template>
+<br>
+**************************************<br>
+
+
+<div *ngIf="10%2==0; then evenNo; else oddNo">
+
+</div>
+
+<ng-template #evenNo>
+    10 is even number
+</ng-template>
+
+<ng-template #oddNo>
+    10 is odd number
+</ng-template>
+
+<br>
+**************************************
+<br>
+
+<div *ngIf="11%2==0; then evenNumbers; else oddNumbers">
+
+</div>
+
+<ng-template #evenNumbers>
+    11 is even
+</ng-template>
+
+<ng-template #oddNumbers>
+    11 is odd
+</ng-template>
+<br>
+
+*************   ngFor   **********
+<div *ngIf="book then bookAvailable; else noBookAvailable">
+    Book variable exist
+</div>
+
+<ng-template #bookAvailable>
+    <div *ngFor="let b of book index as i; even as e; odd as o; first as f; last as l; ">
+        <div>
+        {{b.bookId}}  -  {{i}} - {{b.bookName}}  -  Even:{{e}}  -  Odd:{{o}}  - First:{{f}}  -  Last:{{l}}
+        </div>
+    </div>
+
+</ng-template>
+
+<ng-template #noBookAvailable>
+    No book to display
+</ng-template>
+<br>
+*********************ngSwitchCase****************************
+<div *ngIf="book then bookAvailables; else noBookAvailables;">
+    Book variable exist
+</div>
+
+<ng-template #bookAvailables>
+    <div *ngFor="let b of book">
+        <div [ngSwitch]="b.bookStatus">
+            <div *ngSwitchCase="'Available'">
+                Available Book Name:{{b.bookName}}         
+            </div>
+            <div *ngSwitchCase="'Not Available'">
+                Not Available Book Name:{{b.bookName}}
+            </div>
+            <div *ngSwitchDefault>
+                Default-{{b.bookName}}
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #noBookAvailables>
+    No Book to display
+</ng-template>

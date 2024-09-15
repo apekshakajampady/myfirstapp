@@ -1,0 +1,7 @@
+<p [ngStyle]="{'color':'red','font-size':'30px','background-color':'green','font-weight':'800'}">attribute works!</p>
+
+<div *ngFor="let s of student">
+   <div [ngClass]="{'present':s.studentStatus=='Present','npresent':s.studentStatus=='Not Present'}">
+    {{s.studentStatus}}
+   </div>
+</div>

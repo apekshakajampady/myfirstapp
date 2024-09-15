@@ -1,0 +1,19 @@
+<p>middle works!</p>
+
+<h2>String Interpolation</h2>
+<p>Student Id: {{studentId}}</p>
+<p>Student Name: {{studentName}}</p>
+<p>Student Address: {{studentAddress}}</p>
+<p>Student Percentage: {{studentPercentage}}</p>
+<p>Student Result: {{studentResult}}</p>
+
+<h2>Event Binding</h2>
+<button (click)="onToggle()" class="btn btn-danger">Result</button>
+<p>Student Result is: {{studentResult}}</p>
+
+<h2>Two Way Binding</h2>
+<input type="text" class="form-control" [(ngModel)]="studentName">
+<p>Two way Binding: {{studentName}}</p>
+
+<h2>Property Binding</h2>
+<button class="btn btn-warning" [disabled]="btnResult">Click Here!!!!</button>

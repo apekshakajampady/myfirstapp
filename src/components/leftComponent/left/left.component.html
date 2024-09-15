@@ -1,0 +1,35 @@
+<p>left works!</p>
+<button class="btn btn-primary">Click Me!</button>
+<hr />
+<h3>String Interpolation</h3>
+<p>Book Id= {{ bookId }}</p>
+<p>Book Name= {{ bookName }}</p>
+<p>Book Price= {{ bookPrice }}</p>
+<p>Book Author= {{ bookAuthor }}</p>
+<p>Book Status= {{ bookStatus }}</p>
+<small>whatever given in ts file,it is converted to string.Displays data</small>
+<hr />
+<h3>Property Binding</h3>
+<div>
+  <button class="btn btn-success" [disabled]="btnToggle">Toggle</button>
+  <small
+    >Button will be disabled.So in run time we are enabling using property
+    binding.</small
+  >
+</div>
+
+<hr />
+<h3>Event Binding</h3>
+<div>
+  <button (click)="onToggle()">Book Status</button>
+</div>
+<p>Book Status: {{ bookStatus }}</p>
+
+<hr />
+<h3>Two way Binding</h3>
+<div>
+  <input type="text" class="form-control" [(ngModel)]="bookName" />
+</div>
+<div>
+  <p>Book Name changed by two way binding {{ bookName }}</p>
+</div>
