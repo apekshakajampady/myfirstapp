@@ -1,0 +1,9 @@
+<p>observables works!</p>
+<div *ngIf="posts">
+    <h2>Posts</h2>
+    <ul>
+        <li *ngFor="let post of posts">
+            {{post.title}}
+        </li>
+    </ul>
+</div>

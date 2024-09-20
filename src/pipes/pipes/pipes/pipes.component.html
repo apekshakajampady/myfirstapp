@@ -1,0 +1,56 @@
+<p>pipes works!</p>
+<p>Today Date: {{today|date:'short'}}</p>
+<p>Today Date: {{today}}</p>
+<p>Today date: {{today | date}} </p>
+<p>date: {{today | date:'fullDate'}} </p>
+<p>Date: {{today|date:'h:m az'}}</p>
+<p>Date: {{today|date:'yyyy-MM-dd HH-mm-ss'}}</p>
+<p> UpperCase: {{capitalLetter|uppercase}} </p>
+<p>Lowercase: {{lowerCase|lowercase}} </p>
+<p>Titlecase: {{titleCase|titlecase}} </p>
+<p>Currency:{{a|currency}}</p>
+<p>Currency: {{a|currency:'INR'}}</p>
+<p>Currency:{{a|currency:'EUR'}}</p>
+<p>Currency: {{a|currency:'USD'}}</p>
+<p>Currency: {{a|currency:'NZD'}}</p>
+
+<p>Currency: {{a|currency:'AUD'}}</p>
+<p>Currency: {{a|currency:"CAD"}}</p>
+
+<p>Decimal Number: {{pi|number}}</p>
+<p>Decimal Number: {{num|number}}</p>
+<p>Decimal Number: {{pi|number:'4.1-5'}}</p>
+
+<p>Percentage: {{x|percent}}</p>
+
+<p>Slice Pipe: {{name|slice:2}}</p>
+<p>Slice Pipe : {{name|slice: 0:3}}</p>
+<p>Slice Pipe : {{name|slice: 2:3}}</p>
+
+<p>Slice Pipe : {{names|slice:0}}</p>
+<p>Slice Pipe : {{names|slice:5}}</p>
+<p>Slice Pipe: {{names|slice: 2:5}}</p>
+<p>Slice Pipe: {{names|slice: 0:5}}</p>
+
+<p>Slice Pipe: {{marks|slice: 0}}</p>
+<p>Slice Pipe: {{marks|slice: 5}}</p>
+<p>Slice Pipe: {{marks|slice: 0:4}}</p>
+<p>Slice Pipe: {{marks|slice: 2:4}}</p>
+<p>Json pipe: {{myData|json}}</p>
+<p>Json pipe: {{data|json}}</p>
+
+<p *ngFor="let d of data|slice:3:4">Pipe:{{d}}</p>
+
+<p>{{a|currency:'INR:':'symbol':'4.2-3':'en'}}</p>
+
+<p>{{today|date:'yyyy:MM:dd hh:mm:ss a'}}</p>
+
+<p>i18nSelect pipe: {{g|i18nSelect:gender}}</p>
+<p *ngFor="let d of detail|keyvalue">KeyValue: {{d.key}}-{{d.value}}</p>
+<p *ngFor="let stu of student|keyvalue">KeyValue: {{stu.key}}-{{stu.value}}</p>
+
+
+<p>i18nPlural pipe: {{f|i18nPlural:flower}}</p>
+<p>{{hobby|json}}</p>
+
+

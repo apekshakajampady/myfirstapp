@@ -1,3 +1,12 @@
 <p>parent works!</p>
 <app-child (messageEvent)="receiveMessage($event)"></app-child>
 <p>Message from child Component:{{message}}</p>
+
+
+<div>
+Square root of number:{{25 | sqrt}}
+</div>
+
+<div>
+    shorten sentence: {{'Apeksha! Make your heart most beautiful thing about you'|shorten:5}}
+</div>
