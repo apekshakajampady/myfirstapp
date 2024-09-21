@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ProductserviceService {
 
   constructor(private _http:HttpClient) { }
-  saveProduct(product:any[]):Observable<any>{
+  saveProduct(product:any[]):Observable<any> {
     return this._http.post("https://angular-first-project-19daa-default-rtdb.firebaseio.com/items.json",product)
   }
 }
